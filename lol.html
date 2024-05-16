@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Walls with Windows in A-Frame</title>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+  </head>
+  <body>
+    <a-scene>
+        
+      <!-- Walls -->
+      <a-box position="3 2.5 3" width="10" height="5" depth="1" color="#999"></a-box>
+      <a-box position="-2 2.5 0" width="1" height="5" depth="6.5" color="#999"></a-box>
+      <a-box position="3 2.5 0" width="1" height="5" depth="6.5" color="#999"></a-box>
+
+      <a-plane position="0 1.5 5" rotation="0 0 0" width="10" height="5" color="#87CEEB" transparent="true" opacity="0.5"></a-plane>
+
+      <!-- Roof -->
+      <a-box position="2 4.5 0.5" width="7" height="1" depth="6.5" color="black"></a-box>
+
+      <!-- Ground -->
+      <a-plane position="0 0 0" rotation="-90 0 0" width="6" height="6.5" color="#555"></a-plane>
+      
+      <!-- Sky -->
+      <a-sky color="#87CEEB"></a-sky>
+
+      <!-- Prison Bars -->
+      <a-cylinder radius="0.1" height="5" color="#999" position="2.5 2.5 -1.5"></a-cylinder>
+      <a-cylinder radius="0.1" height="5" color="#999" position="2 2.5 -1.5"></a-cylinder>
+      <a-cylinder radius="0.1" height="5" color="#999" position="1.5 2.5 -1.5"></a-cylinder>
+      <a-cylinder radius="0.1" height="5" color="#999" position="1 2.5 -1.5"></a-cylinder>
+      <a-cylinder radius="0.1" height="5" color="#999" position="0.5 2.5 -1.5"></a-cylinder>
+      <a-cylinder radius="0.1" height="5" color="#999" position="0 2.5 -1.5"></a-cylinder>
+      <a-cylinder radius="0.1" height="5" color="#999" position="-0.5 2.5 -1.5"></a-cylinder>
+      <a-cylinder radius="0.1" height="5" color="#999" position="-1 2.5 -1.5"></a-cylinder>
+      <a-cylinder radius="0.1" height="5" color="#999" position="-1.5 2.5 -1.5"></a-cylinder>
+      <a-cylinder radius="0.1" height="5" color="#999" position="-2 2.5 -1.5"></a-cylinder>
+      <a-cylinder radius="0.1" height="5" color="#999" position="-2.5 2.5 -1.5"></a-cylinder>
+    </a-scene>
+  </body>
+</html>
