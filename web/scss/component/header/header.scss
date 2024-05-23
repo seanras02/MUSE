@@ -1,7 +1,22 @@
-
-
-header{
+header {
     width: 100%;
-    height: 20rem;
-    background: red($color: #e0d728,);
+    height: 10rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 2rem;
+    box-shadow: 10px 10px 5px lightblue;
+}
+
+.headerui {
+    width: 30rem;
+    height: 120%;
+    display: flex;
+    flex-direction: row;
+}
+
+.ui_items {
+    padding-right: 2rem;
+    padding-top: 2rem;
+    list-style: none;
 }
