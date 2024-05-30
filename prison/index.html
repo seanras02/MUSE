@@ -3,48 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
+    <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-environment-component@1.3.3/dist/aframe-environment-component.min.js"></script>
     <title>Lenape man in Amsterdam</title>
 </head>
 <body>
     <a-scene>
-        <a-plane width="15" height="18" color="grey" position="-0.5 0 -8" rotation="-90 0 0"></a-plane>
+        
+        <a-plane width="15" height="20" color="grey" position="-0.5 0 -8" rotation="-90 0 0"></a-plane>
 
         <!-- prison bars front-->
-        <a-cylinder radius="0.1" height="4" color="#999" position="2 2 -2.5"></a-cylinder>
         <a-cylinder radius="0.1" height="4" color="#999" position="1.5 2 -2.5"></a-cylinder>       
-        <a-cylinder radius="0.1" height="4" color="#999" position="1 2 -2.5"></a-cylinder>
-        <a-cylinder radius="0.1" height="4" color="#999" position="0.5 2 -2.5"></a-cylinder>
-        <a-cylinder radius="0.1" height="4" color="#999" position="0 2 -2.5"></a-cylinder>
-        <a-cylinder radius="0.1" height="4" color="#999" position="-0.5 2 -2.5"></a-cylinder>
-        <a-cylinder radius="0.1" height="4" color="#999" position="-1 2 -2.5"></a-cylinder>
-        <a-cylinder radius="0.1" height="4" color="#999" position="-1.5 2 -2.5"></a-cylinder>
-        <a-cylinder radius="0.1" height="4" color="#999" position="-2 2 -2.5"></a-cylinder>
+        
+       
         
         <!-- prison bars left-->
-        <a-cylinder radius="0.1" height="4" color="#999" position="-2 2 -2" rotation="0 90 0"></a-cylinder>
-        <a-cylinder radius="0.1" height="4" color="#999" position="-2 2 -1.5" rotation="0 90 0"></a-cylinder>
-        <a-cylinder radius="0.1" height="4" color="#999" position="-2 2 -1" rotation="0 90 0"></a-cylinder>
-        <a-cylinder radius="0.1" height="4" color="#999" position="-2 2 -0.5" rotation="0 90 0"></a-cylinder>
-        <a-cylinder radius="0.1" height="4" color="#999" position="-2 2 0" rotation="0 90 0"></a-cylinder>
-        <a-cylinder radius="0.1" height="4" color="#999" position="-2 2 0.5" rotation="0 90 0"></a-cylinder>
-        <a-cylinder radius="0.1" height="4" color="#999" position="-2 2 1" rotation="0 90 0"></a-cylinder>
-
+        <a-cylinder radius="0.1" height="4" color="#999" position="-1.5 2 -2" rotation="0 90 0"></a-cylinder>
+       
+        
         <!-- prison bars right-->
-        <a-cylinder radius="0.1" height="4" color="#999" position="2 2 -2" rotation="0 90 0"></a-cylinder>
-        <a-cylinder radius="0.1" height="4" color="#999" position="2 2 -1.5" rotation="0 90 0"></a-cylinder>
-        <a-cylinder radius="0.1" height="4" color="#999" position="2 2 -1" rotation="0 90 0"></a-cylinder>
-        <a-cylinder radius="0.1" height="4" color="#999" position="2 2 -0.5" rotation="0 90 0"></a-cylinder>
-        <a-cylinder radius="0.1" height="4" color="#999" position="2 2 0" rotation="0 90 0"></a-cylinder>
-        <a-cylinder radius="0.1" height="4" color="#999" position="2 2 0.5" rotation="0 90 0"></a-cylinder>
-        <a-cylinder radius="0.1" height="4" color="#999" position="2 2 1" rotation="0 90 0"></a-cylinder>
-        <a-cylinder radius="0.1" height="4" color="#999" position="2 2 -2" rotation="0 90 0"></a-cylinder>
+        <a-cylinder radius="0.1" height="4" color="#999" position="1.5 2 -2" rotation="0 90 0"></a-cylinder>
+        
+        <a-cylinder radius="0.1" height="4" color="#999" position="1.5 2 0.5" rotation="0 90 0"></a-cylinder>
+
+        <!--Boxes-->
+        <a-entity id="box" src="/img/box.jpg" geometry="primitive: box" material="color: red" position="1.5 1.5 1.5" rotation="0 59 0"></a-entity>
+        <a-entity id="box" src="/img/box.jpg" geometry="primitive: box" material="color: red" position="0.6 0.5 1.5"rotation="0 0 0"></a-entity>
+        <a-entity id="box" src="/img/box.jpg" geometry="primitive: box" material="color: red" position="2 0.5 1.5" rotation="0 15 0"></a-entity>
+        <a-entity id="box" src="/img/box.jpg" geometry="primitive: box" material="color: red" position="0.3 1.5 1.5"rotation="0 31 0"></a-entity>
+        <a-entity id="box" src="/img/box.jpg" geometry="primitive: box" material="color: red" position="-0.6 0.5 1.5" rotation="0 5 0"></a-entity>
+        <a-entity id="box" src="/img/box.jpg" geometry="primitive: box" material="color: red" position="-2 0.5 1.5" rotation="0 10 0"></a-entity>
+        <a-entity id="box" src="/img/box.jpg" geometry="primitive: box" material="color: red" position="-1.2 1.5 1.5" rotation="0 72 0"></a-entity>
+        <a-entity id="box" src="/img/box.jpg" geometry="primitive: box" material="color: red" position="1 2.5 1.5" rotation="0 25 0"></a-entity>
+        <a-entity id="box" src="/img/box.jpg" geometry="primitive: box" material="color: red" position="-0.5 2.5 1.5" rotation="0 43 0"></a-entity>
+
+        <a-entity id="box" geometry="primitive: box" material="color: red" position="-4 0.5 1.5" rotation="0 75 0"></a-entity>
+        <a-entity id="box" geometry="primitive: box" material="color: red" position="4 0.5 1.5" rotation="0 200 0"></a-entity>
 
 
 
-        <a-box width="4" height="0.1" depth="3.7" color="grey" position="0 4 -0.7"></a-box>
 
-        <a-box width="4" height="4" depth="0.1" color="grey" position="0 2 1"></a-box>
+
+
+
+        <a-box width="3.5" height="0.1" depth="3" color="grey" position="0 4 -1"></a-box>
+
 
     </a-scene>
 </body>
