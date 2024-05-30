@@ -18,12 +18,12 @@
        
         
         <!-- prison bars left-->
-        <a-cylinder radius="0.1" height="4" color="#999" position="-1.5 2 -2" rotation="0 90 0"></a-cylinder>
+        <a-cylinder radius="0.1" height="4" color="#999" position="-1.5 2 -2.3" rotation="0 90 0"></a-cylinder>
+
+        <a-cylinder radius="0.1" height="4" color="#999" position="-1.5 2 0.5" rotation="0 90 0"></a-cylinder>
        
-        
+
         <!-- prison bars right-->
-        <a-cylinder radius="0.1" height="4" color="#999" position="1.5 2 -2" rotation="0 90 0"></a-cylinder>
-        
         <a-cylinder radius="0.1" height="4" color="#999" position="1.5 2 0.5" rotation="0 90 0"></a-cylinder>
 
         <!--Boxes-->
@@ -41,14 +41,13 @@
         <a-entity id="box" geometry="primitive: box" material="color: red" position="4 0.5 1.5" rotation="0 200 0"></a-entity>
 
 
+        <a-entity gltf-model="url(models/Watcher.glb)" position="0 0 -7"></a-entity>
 
-
+        <a-entity gltf-model="models/old-amsterdam-buildings.glb" position="0 0 -10"></a-entity>
 
 
 
         <a-box width="3.5" height="0.1" depth="3" color="grey" position="0 4 -1"></a-box>
-
-
     </a-scene>
 </body>
 </html>
