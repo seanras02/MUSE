@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
     <script src="https://unpkg.com/aframe-environment-component@1.3.3/dist/aframe-environment-component.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
     <title>Lenape man in Amsterdam</title>
 </head>
 <body>
@@ -16,12 +17,14 @@
             <img id="groundText" src="img/ground.webp">
             <img id="boxText" src="img/doos.webp">
             <img id="skyText" src="img/skybox.webp">
+            <img id="skyNightText" src="img/nacht-skybox.webp">
+
         </a-assets>
 
 
 
         <!--sky-->
-        <a-sky id="sky" material="src: #skyText; repeat: 4 4 4" rotation="0 -90 0"></a-sky>
+        <a-sky id="sky" material="src: #skyNightText; repeat: 2 2" rotation="0 -90 0"></a-sky>
 
         <!--Terrain-->       
         <a-plane material="src: #groundText; repeat: 20 20 20" width="110" height="80" color="grey" position="-0.5 0 -10" rotation="-90 0 0"></a-plane>
@@ -53,8 +56,8 @@
         <a-entity id="box" geometry="primitive: box" material="src: #boxText" position="4 0.5 1.5" rotation="0 200 0"></a-entity>
 
         <!--People-->
-        <a-entity gltf-model="models/Watcher.glb" position="0 0 -10"></a-entity>
-        <a-entity gltf-model="models/Watcher.glb" position="0 0 -5"></a-entity>
+        <a-entity gltf-model="models/Watcher.glb" position="0 0 -10" animation-mixer></a-entity>
+        <a-entity gltf-model="models/Watcher.glb" position="0 0 -5" animation-mixer></a-entity>
 
         <!--walking-->
 
@@ -73,10 +76,13 @@
         <a-entity gltf-model="models/old-amsterdam-buildings.glb" position="-24 0 -50" rotation="0 -90 0" depth="-5"></a-entity>
         <a-entity gltf-model="models/old-amsterdam-buildings.glb" position="4 0 -50" rotation="0 -90 0" depth="-5"></a-entity>
 
+
         <!--Buildings left-->
         <a-entity gltf-model="models/old-amsterdam-buildings.glb" position="-45 0 -26" rotation="0 360 0" depth="-5"></a-entity>
         <a-entity gltf-model="models/old-amsterdam-buildings.glb" position="-45 0 -5" rotation="0 360 0" depth="-5"></a-entity>
         <a-entity gltf-model="models/old-amsterdam-buildings.glb" position="-45 0 23" rotation="0 360 0" depth="-5"></a-entity>
+
+        <a-entity gltf-model="models/amsterdambuilding.glb" material="color: yellow" position="-45 - 10" rotation="0 360 0" depth="-5"></a-entity>
 
         <!--Buildings Right-->
         <a-entity gltf-model="models/old-amsterdam-buildings.glb" position="55 0 -48" rotation="0 -180 0" depth="-5"></a-entity>
