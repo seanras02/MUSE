@@ -9,8 +9,22 @@
 </head>
 <body>
     <a-scene>
+        <!--assets-->
+        <a-assets>
+            <a-asset-item id="watcher" src="models/Watcher.glb"></a-asset-item>
+            
+            <img id="groundText" src="img/ground.webp">
+            <img id="boxText" src="img/doos.webp">
+            <img id="skyText" src="img/skybox.webp">
+        </a-assets>
+
+
+
+        <!--sky-->
+        <a-sky id="sky" material="src: #skyText; repeat: 4 4 4" rotation="0 -90 0"></a-sky>
+
         <!--Terrain-->       
-        <a-plane width="110" height="80" color="grey" position="-0.5 0 -10" rotation="-90 0 0"></a-plane>
+        <a-plane material="src: #groundText; repeat: 20 20 20" width="110" height="80" color="grey" position="-0.5 0 -10" rotation="-90 0 0"></a-plane>
 
         <!--bar front-->
         <a-cylinder radius="0.1" height="4" color="#999" position="1.5 2 -2.5"></a-cylinder>       
@@ -25,23 +39,33 @@
         <a-box width="3.5" height="0.1" depth="3" color="grey" position="0 4 -1"></a-box>
 
         <!--Boxes-->
-        <a-entity id="box" src="/img/box.jpg" geometry="primitive: box" material="color: red" position="1.5 1.5 1.5" rotation="0 59 0"></a-entity>
-        <a-entity id="box" src="/img/box.jpg" geometry="primitive: box" material="color: red" position="0.6 0.5 1.5"rotation="0 0 0"></a-entity>
-        <a-entity id="box" src="/img/box.jpg" geometry="primitive: box" material="color: red" position="2 0.5 1.5" rotation="0 15 0"></a-entity>
-        <a-entity id="box" src="/img/box.jpg" geometry="primitive: box" material="color: red" position="0.3 1.5 1.5"rotation="0 31 0"></a-entity>
-        <a-entity id="box" src="/img/box.jpg" geometry="primitive: box" material="color: red" position="-0.6 0.5 1.5" rotation="0 5 0"></a-entity>
-        <a-entity id="box" src="/img/box.jpg" geometry="primitive: box" material="color: red" position="-2 0.5 1.5" rotation="0 10 0"></a-entity>
-        <a-entity id="box" src="/img/box.jpg" geometry="primitive: box" material="color: red" position="-1.2 1.5 1.5" rotation="0 72 0"></a-entity>
-        <a-entity id="box" src="/img/box.jpg" geometry="primitive: box" material="color: red" position="1 2.5 1.5" rotation="0 25 0"></a-entity>
-        <a-entity id="box" src="/img/box.jpg" geometry="primitive: box" material="color: red" position="-0.5 2.5 1.5" rotation="0 43 0"></a-entity>
+        <a-entity id="box" geometry="primitive: box" material="src: #boxText" position="1.5 1.5 1.5" rotation="0 59 0"></a-entity>
+        <a-entity id="box" geometry="primitive: box" material="src: #boxText" position="0.6 0.5 1.5"rotation="0 0 0"></a-entity>
+        <a-entity id="box" geometry="primitive: box" material="src: #boxText" position="2 0.5 1.5" rotation="0 15 0"></a-entity>
+        <a-entity id="box" geometry="primitive: box" material="src: #boxText" position="0.3 1.5 1.5"rotation="0 31 0"></a-entity>
+        <a-entity id="box" geometry="primitive: box" material="src: #boxText" position="-0.6 0.5 1.5" rotation="0 5 0"></a-entity>
+        <a-entity id="box" geometry="primitive: box" material="src: #boxText" position="-2 0.5 1.5" rotation="0 10 0"></a-entity>
+        <a-entity id="box" geometry="primitive: box" material="src: #boxText" position="-1.2 1.5 1.5" rotation="0 72 0"></a-entity>
+        <a-entity id="box" geometry="primitive: box" material="src: #boxText" position="1 2.5 1.5" rotation="0 25 0"></a-entity>
+        <a-entity id="box" geometry="primitive: box" material="src: #boxText" position="-0.5 2.5 1.5" rotation="0 43 0"></a-entity>
 
-        <a-entity id="box" geometry="primitive: box" material="color: red" position="-4 0.5 1.5" rotation="0 75 0"></a-entity>
-        <a-entity id="box" geometry="primitive: box" material="color: red" position="4 0.5 1.5" rotation="0 200 0"></a-entity>
+        <a-entity id="box" geometry="primitive: box" material="src: #boxText" position="-4 0.5 1.5" rotation="0 75 0"></a-entity>
+        <a-entity id="box" geometry="primitive: box" material="src: #boxText" position="4 0.5 1.5" rotation="0 200 0"></a-entity>
 
         <!--People-->
         <a-entity gltf-model="models/Watcher.glb" position="0 0 -10"></a-entity>
         <a-entity gltf-model="models/Watcher.glb" position="0 0 -5"></a-entity>
 
+        <!--walking-->
+
+        <!--<a-entity
+            id="character" 
+            gltf-model="#watcher" 
+            position="0 0 -5"
+            scale="2 2 2"
+            animation-mixer="clip: walk"
+            animation="property: position; to: 4 0 0; dur: 4000; easing: linear; loop: true">
+        </a-entity>-->
 
 
         <!--Buildings front-->    
