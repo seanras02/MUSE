@@ -236,6 +236,12 @@ footer {
 .footer-links a:hover {
   text-decoration: underline;
 }
+ 
+.social{
+  text-decoration: none;
+  color: #fff;
+}
+
 
 .socials a:hover img {
   filter: invert(0.8);
