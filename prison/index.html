@@ -22,6 +22,8 @@
         <!--bar right-->
         <a-cylinder radius="0.1" height="4" color="#999" position="1.5 2 0.5" rotation="0 90 0"></a-cylinder>
 
+        <a-box width="3.5" height="0.1" depth="3" color="grey" position="0 4 -1"></a-box>
+
         <!--Boxes-->
         <a-entity id="box" src="/img/box.jpg" geometry="primitive: box" material="color: red" position="1.5 1.5 1.5" rotation="0 59 0"></a-entity>
         <a-entity id="box" src="/img/box.jpg" geometry="primitive: box" material="color: red" position="0.6 0.5 1.5"rotation="0 0 0"></a-entity>
@@ -37,7 +39,10 @@
         <a-entity id="box" geometry="primitive: box" material="color: red" position="4 0.5 1.5" rotation="0 200 0"></a-entity>
 
         <!--People-->
-        <a-entity gltf-model="url(models/Watcher.glb)" position="0 0 -7"></a-entity>
+        <a-entity gltf-model="models/Watcher.glb" position="0 0 -10"></a-entity>
+        <a-entity gltf-model="models/Watcher.glb" position="0 0 -5"></a-entity>
+
+
 
         <!--Buildings front-->    
         <a-entity gltf-model="models/old-amsterdam-buildings.glb" position="-42 0 -50" rotation="0 -90 0" depth="-5"></a-entity>
@@ -52,17 +57,14 @@
         <!--Buildings Right-->
         <a-entity gltf-model="models/old-amsterdam-buildings.glb" position="55 0 -48" rotation="0 -180 0" depth="-5"></a-entity>
         <a-entity gltf-model="models/old-amsterdam-buildings.glb" position="55 0 -29" rotation="0 -180 0" depth="-5"></a-entity>
+        <a-entity gltf-model="models/old-amsterdam-buildings.glb" position="55 0 -0" rotation="0 -180 0" depth="-5"></a-entity>
+
 
         <!--Buildings Back-->
+        <a-entity gltf-model="models/old-amsterdam-buildings.glb" position="52 0 24" rotation="0 90 0" depth="-5"></a-entity>
+        <a-entity gltf-model="models/old-amsterdam-buildings.glb" position="32 0 24" rotation="0 90 0" depth="-5"></a-entity>
+        <a-entity gltf-model="models/old-amsterdam-buildings.glb" position="6 0 24" rotation="0 90 0" depth="-5"></a-entity>
 
-
-
-
-
-
-
-
-        <a-box width="3.5" height="0.1" depth="3" color="grey" position="0 4 -1"></a-box>
     </a-scene>
 </body>
 </html>
