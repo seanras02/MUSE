@@ -14,13 +14,14 @@
     
     <!-- Load and use a 3D model with a walking animation -->
     <a-assets>
-      <a-asset-item id="characterModel" src="path/to/your/walking-character.glb"></a-asset-item>
+      <a-asset-item id="characterModel" src="/Assets/Models/Watcher.glb"></a-asset-item>
     </a-assets>
     
     <a-entity 
       id="character" 
       gltf-model="#characterModel" 
       position="0 0 0"
+      scale="2 2 2"
       animation-mixer="clip: walk"
       animation="property: position; to: 4 0 0; dur: 4000; easing: linear; loop: true">
     </a-entity>

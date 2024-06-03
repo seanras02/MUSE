@@ -9,25 +9,18 @@
 </head>
 <body>
     <a-scene>
-        
-        <a-plane width="15" height="20" color="grey" position="-0.5 0 -8" rotation="-90 0 0"></a-plane>
+        <!--Terrain-->       
+        <a-plane width="110" height="80" color="grey" position="-0.5 0 -10" rotation="-90 0 0"></a-plane>
 
-        <!-- prison bars front-->
-        
-       
-        
-        <!-- prison bars left-->
+        <!--bar front-->
+        <a-cylinder radius="0.1" height="4" color="#999" position="1.5 2 -2.5"></a-cylinder>       
+               
+        <!--bars left-->
         <a-cylinder radius="0.1" height="4" color="#999" position="-1.5 2 -2.3" rotation="0 90 0"></a-cylinder>
+        <a-cylinder radius="0.1" height="4" color="#999" position="-1.5 2 0.5" rotation="0 90 0"></a-cylinder>
        
-        
-        <!-- prison bars right-->
-        <a-cylinder radius="0.1" height="4" color="#999" position="1.5 2 -2.3" rotation="0 90 0"></a-cylinder>
-       
-
-        <a-cylinder radius="0.1" height="4" color="#999" position="-1.5 2 0.3" rotation="0 90 0"></a-cylinder>
-        
-        
-        <a-cylinder radius="0.1" height="4" color="#999" position="1.5 2 0.3" rotation="0 90 0"></a-cylinder>
+        <!--bar right-->
+        <a-cylinder radius="0.1" height="4" color="#999" position="1.5 2 0.5" rotation="0 90 0"></a-cylinder>
 
         <!--Boxes-->
         <a-entity id="box" src="/img/box.jpg" geometry="primitive: box" material="color: red" position="1.5 1.5 1.5" rotation="0 59 0"></a-entity>
@@ -43,23 +36,33 @@
         <a-entity id="box" geometry="primitive: box" material="color: red" position="-4 0.5 1.5" rotation="0 75 0"></a-entity>
         <a-entity id="box" geometry="primitive: box" material="color: red" position="4 0.5 1.5" rotation="0 200 0"></a-entity>
 
+        <!--People-->
+        <a-entity gltf-model="url(models/Watcher.glb)" position="0 0 -7"></a-entity>
 
-        <a-entity id="mouseCursor" cursor="rayOrigin: mouse"></a-entity>
+        <!--Buildings front-->    
+        <a-entity gltf-model="models/old-amsterdam-buildings.glb" position="-42 0 -50" rotation="0 -90 0" depth="-5"></a-entity>
+        <a-entity gltf-model="models/old-amsterdam-buildings.glb" position="-24 0 -50" rotation="0 -90 0" depth="-5"></a-entity>
+        <a-entity gltf-model="models/old-amsterdam-buildings.glb" position="4 0 -50" rotation="0 -90 0" depth="-5"></a-entity>
 
-<a-entity
-  geometry="primitive: box"
-  material="color: red"
-  animation__mouseenter="property: components.material.material.color; type: color; to: blue; startEvents: mouseenter; dur: 500";
-  animation__mouseleave="property: components.material.material.color; type: color; to: red; startEvents: mouseleave; dur: 500";>
-</a-entity>
+        <!--Buildings left-->
+        <a-entity gltf-model="models/old-amsterdam-buildings.glb" position="-45 0 -26" rotation="0 360 0" depth="-5"></a-entity>
+        <a-entity gltf-model="models/old-amsterdam-buildings.glb" position="-45 0 -5" rotation="0 360 0" depth="-5"></a-entity>
+        <a-entity gltf-model="models/old-amsterdam-buildings.glb" position="-45 0 23" rotation="0 360 0" depth="-5"></a-entity>
+
+        <!--Buildings Right-->
+        <a-entity gltf-model="models/old-amsterdam-buildings.glb" position="55 0 -48" rotation="0 -180 0" depth="-5"></a-entity>
+        <a-entity gltf-model="models/old-amsterdam-buildings.glb" position="55 0 -29" rotation="0 -180 0" depth="-5"></a-entity>
+
+        <!--Buildings Back-->
+
+
+
 
 
 
 
 
         <a-box width="3.5" height="0.1" depth="3" color="grey" position="0 4 -1"></a-box>
-
-
     </a-scene>
 </body>
 </html>
