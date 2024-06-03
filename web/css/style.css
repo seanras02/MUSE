@@ -30,9 +30,18 @@ header {
   align-items: center;
   justify-content: center;
   padding: 2rem;
-  box-shadow: 10px 10px 5px lightblue;
+  box-shadow: 10px 8px 5px lightblue;
+  animation: slide-in 0.5s;
 }
 
+@keyframes slide-in {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0%);
+  }
+}
 .header-ui {
   display: flex;
   flex-direction: row;
@@ -93,14 +102,27 @@ header {
 .box {
   width: 35rem;
   height: 35rem;
-  box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, 10px 10px 5px lightblue;
+  box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 2px -1px, 7px 7px 2px gray;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 3rem;
   flex-direction: column;
+  opacity: 0;
+  transform: scale(1);
+  animation: popup 0.5s forwards ease-in-out;
 }
 
+@keyframes popup {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
 .text {
   display: flex;
   justify-content: center;
@@ -108,8 +130,8 @@ header {
 }
 
 .play-btn {
-  width: 100px;
-  height: 100px;
+  width: 10rem;
+  height: 10rem;
   background: radial-gradient(rgb(202, 244, 255) 60%, rgb(255, 255, 255) 62%);
   border-radius: 50%;
   position: relative;
