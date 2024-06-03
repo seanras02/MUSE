@@ -5,8 +5,19 @@ header {
     align-items: center;
     justify-content: center;
     padding: 2rem;
-    box-shadow: 10px 10px 5px lightblue;
+    box-shadow: 10px 8px 5px lightblue;
+    animation: slide-in 0.5s;
 }
+
+@keyframes slide-in {
+    from {
+      transform: translateY(-100%);
+    }
+    to {
+      transform: translateY(0%);
+    }
+  }
+
 
 
 .header-ui {
@@ -46,9 +57,7 @@ header {
     
 }
 
-.ui-button__three{
 
-}
 
 .ui-button:hover {
     background-color: white; /* Darker shade on hover */
