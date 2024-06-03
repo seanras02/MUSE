@@ -1,0 +1,43 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    position: relative; /* Added to make sure buttons position relative to body */
+}
+
+.home-button, .reset-button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+
+}
+
+.home-button:hover, .reset-button:hover {
+    background-color: #0056b3;
+}
+
+.home-button {
+    top: 10px;
+    left: 10px;
+}
+
+.reset-button {
+    top: 12rem;
+    right: 14rem;
+    margin-right: 43rem;
+    position: absolute;
+}
+
+header{
+    width: 100%;
+    height: 6rem;
+    background:  lightblue;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
