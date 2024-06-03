@@ -5,12 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
     <script src="https://unpkg.com/aframe-environment-component@1.3.3/dist/aframe-environment-component.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
     <title>Lenape man in Amsterdam</title>
 </head>
 <body>
     <a-scene>
+        <!--assets-->
+        <a-assets>
+            <a-asset-item id="watcher" src="Assets/Models/Watcher.glb"></a-asset-item>
+            <a-asset-item id="characterModel" src="/Assets/Models/Watcher.glb"></a-asset-item>
+            
+            <img id="groundText" src="/Assets/Img/ground.webp">
+            <img id="boxText" src="/Assets/Img/doos.webp">
+            <img id="skyText" src="/Assets/Img/skybox.webp">
+            <img id="skyNightText" src="/Assets/Img/nagt skybox.png">
+        </a-assets>
+
+        <!--sky-->
+        <a-sky id="sky" material="src: #skyNightText; repeat: 2 2" rotation="0 -90 0"></a-sky>
+
         <!--Terrain-->       
-        <a-plane width="110" height="80" color="grey" position="-0.5 0 -10" rotation="-90 0 0"></a-plane>
+        <a-plane material="src: #groundText; repeat: 20 20 20" width="110" height="80" color="grey" position="-0.5 0 -10" rotation="-90 0 0"></a-plane>
 
         <!--bar front-->
         <a-cylinder radius="0.1" height="4" color="#999" position="1.5 2 -2.5"></a-cylinder>       
@@ -22,47 +37,100 @@
         <!--bar right-->
         <a-cylinder radius="0.1" height="4" color="#999" position="1.5 2 0.5" rotation="0 90 0"></a-cylinder>
 
+        <a-box width="3.5" height="0.1" depth="3" color="grey" position="0 4 -1"></a-box>
+
         <!--Boxes-->
-        <a-entity id="box" src="/img/box.jpg" geometry="primitive: box" material="color: red" position="1.5 1.5 1.5" rotation="0 59 0"></a-entity>
-        <a-entity id="box" src="/img/box.jpg" geometry="primitive: box" material="color: red" position="0.6 0.5 1.5"rotation="0 0 0"></a-entity>
-        <a-entity id="box" src="/img/box.jpg" geometry="primitive: box" material="color: red" position="2 0.5 1.5" rotation="0 15 0"></a-entity>
-        <a-entity id="box" src="/img/box.jpg" geometry="primitive: box" material="color: red" position="0.3 1.5 1.5"rotation="0 31 0"></a-entity>
-        <a-entity id="box" src="/img/box.jpg" geometry="primitive: box" material="color: red" position="-0.6 0.5 1.5" rotation="0 5 0"></a-entity>
-        <a-entity id="box" src="/img/box.jpg" geometry="primitive: box" material="color: red" position="-2 0.5 1.5" rotation="0 10 0"></a-entity>
-        <a-entity id="box" src="/img/box.jpg" geometry="primitive: box" material="color: red" position="-1.2 1.5 1.5" rotation="0 72 0"></a-entity>
-        <a-entity id="box" src="/img/box.jpg" geometry="primitive: box" material="color: red" position="1 2.5 1.5" rotation="0 25 0"></a-entity>
-        <a-entity id="box" src="/img/box.jpg" geometry="primitive: box" material="color: red" position="-0.5 2.5 1.5" rotation="0 43 0"></a-entity>
-
-        <a-entity id="box" geometry="primitive: box" material="color: red" position="-4 0.5 1.5" rotation="0 75 0"></a-entity>
-        <a-entity id="box" geometry="primitive: box" material="color: red" position="4 0.5 1.5" rotation="0 200 0"></a-entity>
-
-        <!--People-->
-        <a-entity gltf-model="url(models/Watcher.glb)" position="0 0 -7"></a-entity>
+        <a-entity id="box" geometry="primitive: box" material="src: #boxText" position="1.5 1.5 1.5" rotation="0 59 0"></a-entity>
+        <a-entity id="box" geometry="primitive: box" material="src: #boxText" position="0.6 0.5 1.5" rotation="0 0 0"></a-entity>
+        <a-entity id="box" geometry="primitive: box" material="src: #boxText" position="2 0.5 1.5" rotation="0 15 0"></a-entity>
+        <a-entity id="box" geometry="primitive: box" material="src: #boxText" position="0.3 1.5 1.5" rotation="0 31 0"></a-entity>
+        <a-entity id="box" geometry="primitive: box" material="src: #boxText" position="-0.6 0.5 1.5" rotation="0 5 0"></a-entity>
+        <a-entity id="box" geometry="primitive: box" material="src: #boxText" position="-2 0.5 1.5" rotation="0 10 0"></a-entity>
+        <a-entity id="box" geometry="primitive: box" material="src: #boxText" position="-1.2 1.5 1.5" rotation="0 72 0"></a-entity>
+        <a-entity id="box" geometry="primitive: box" material="src: #boxText" position="1 2.5 1.5" rotation="0 25 0"></a-entity>
+        <a-entity id="box" geometry="primitive: box" material="src: #boxText" position="-0.5 2.5 1.5" rotation="0 43 0"></a-entity>
+        <a-entity id="box" geometry="primitive: box" material="src: #boxText" position="-4 0.5 1.5" rotation="0 75 0"></a-entity>
+        <a-entity id="box" geometry="primitive: box" material="src: #boxText" position="4 0.5 1.5" rotation="0 200 0"></a-entity>
 
         <!--Buildings front-->    
-        <a-entity gltf-model="models/old-amsterdam-buildings.glb" position="-42 0 -50" rotation="0 -90 0" depth="-5"></a-entity>
-        <a-entity gltf-model="models/old-amsterdam-buildings.glb" position="-24 0 -50" rotation="0 -90 0" depth="-5"></a-entity>
-        <a-entity gltf-model="models/old-amsterdam-buildings.glb" position="4 0 -50" rotation="0 -90 0" depth="-5"></a-entity>
+        <a-entity gltf-model="Assets/Models/old amsterdam buildings.glb" position="-42 0 -50" rotation="0 -90 0" depth="-5"></a-entity>
+        <a-entity gltf-model="Assets/Models/old amsterdam buildings.glb" position="-24 0 -50" rotation="0 -90 0" depth="-5"></a-entity>
+        <a-entity gltf-model="Assets/Models/old amsterdam buildings.glb" position="4 0 -50" rotation="0 -90 0" depth="-5"></a-entity>
 
         <!--Buildings left-->
-        <a-entity gltf-model="models/old-amsterdam-buildings.glb" position="-45 0 -26" rotation="0 360 0" depth="-5"></a-entity>
-        <a-entity gltf-model="models/old-amsterdam-buildings.glb" position="-45 0 -5" rotation="0 360 0" depth="-5"></a-entity>
-        <a-entity gltf-model="models/old-amsterdam-buildings.glb" position="-45 0 23" rotation="0 360 0" depth="-5"></a-entity>
+        <a-entity gltf-model="Assets/Models/old amsterdam buildings.glb" position="-45 0 -26" rotation="0 360 0" depth="-5"></a-entity>
+        <a-entity gltf-model="Assets/Models/old amsterdam buildings.glb" position="-45 0 -5" rotation="0 360 0" depth="-5"></a-entity>
+        <a-entity gltf-model="Assets/Models/old amsterdam buildings.glb" position="-45 0 23" rotation="0 360 0" depth="-5"></a-entity>
+        <a-entity gltf-model="models/amsterdambuilding.glb" material="color: yellow" position="-45 - 10" rotation="0 360 0" depth="-5"></a-entity>
 
         <!--Buildings Right-->
-        <a-entity gltf-model="models/old-amsterdam-buildings.glb" position="55 0 -48" rotation="0 -180 0" depth="-5"></a-entity>
-        <a-entity gltf-model="models/old-amsterdam-buildings.glb" position="55 0 -29" rotation="0 -180 0" depth="-5"></a-entity>
+        <a-entity gltf-model="Assets/Models/old amsterdam buildings.glb" position="55 0 -48" rotation="0 -180 0" depth="-5"></a-entity>
+        <a-entity gltf-model="Assets/Models/old amsterdam buildings.glb" position="55 0 -29" rotation="0 -180 0" depth="-5"></a-entity>
+        <a-entity gltf-model="Assets/Models/old amsterdam buildings.glb" position="55 0 0" rotation="0 -180 0" depth="-5"></a-entity>
 
         <!--Buildings Back-->
+        <a-entity gltf-model="Assets/Models/old amsterdam buildings.glb" position="52 0 24" rotation="0 90 0" depth="-5"></a-entity>
+        <a-entity gltf-model="Assets/Models/old amsterdam buildings.glb" position="32 0 24" rotation="0 90 0" depth="-5"></a-entity>
+        <a-entity gltf-model="/Assets/Models/old amsterdam buildings.glb" position="6 0 24" rotation="0 90 0" depth="-5"></a-entity>
 
+        <!-- Rows of characters -->
+        <script>
+            AFRAME.registerComponent('rows-of-characters', {
+                init: function () {
+                    const sceneEl = this.el;
+                    const rowCount = 4; 
+                    const initialRadius = 4.51; 
+                    const radiusStep = 4; 
+                    const characterCountPerRow = 10; 
+                    const angleStep = (2 * Math.PI) / characterCountPerRow;
 
+                    for (let row = 0; row < rowCount; row++) {
+                        const radius = initialRadius + (row * radiusStep);
+                        for (let i = 0; i < characterCountPerRow; i++) {
+                            const angle = i * angleStep;
+                            const x = radius * Math.cos(angle);
+                            const z = radius * Math.sin(angle);
+                            const dx = 0 - x;
+                            const dz = 1.5 - z;
+                            const rotationY = Math.atan2(dx, dz) * 180 / Math.PI;
 
+                            const characterEl = document.createElement('a-entity');
+                            characterEl.setAttribute('gltf-model', '#characterModel');
+                            characterEl.setAttribute('position', { x: x, y: 0, z: z });
+                            characterEl.setAttribute('rotation', { x: 0, y: rotationY, z: 0 });
+                            characterEl.setAttribute('animation-mixer', '');
+                            sceneEl.appendChild(characterEl);
+                        }
+                    }
+                }
+            });
 
-
-
-
-
-        <a-box width="3.5" height="0.1" depth="3" color="grey" position="0 4 -1"></a-box>
+            AFRAME.registerComponent('multiple-characters', {
+                init: function () {
+                    const sceneEl = this.el;
+                    const characterCount = 7;
+                    const initialZ = -30;
+                    const maxZ = -50;
+                    const minX = -20;
+                    const maxX = 20;
+                    
+                    for (let i = 0; i < characterCount; i++) {
+                        const z = initialZ - Math.random() * (initialZ - maxZ);
+                        const x = minX + Math.random() * (maxX - minX);
+                        const entity = document.createElement('a-entity');
+                        entity.setAttribute('gltf-model', '#characterModel');
+                        entity.setAttribute('position', { x: x, y: 0, z: z });
+                        entity.setAttribute('animation-mixer', '');
+                        entity.setAttribute('animation', `property: position; to: ${x} 0 1.5; dur: 30000; easing: linear; loop: true`);
+                        sceneEl.appendChild(entity);
+                    }
+                }
+            });
+        </script>
+        
+        <a-entity rows-of-characters></a-entity>
+        <a-entity multiple-characters></a-entity>
+        
     </a-scene>
 </body>
 </html>
