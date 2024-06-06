@@ -32,7 +32,7 @@ header {
   align-items: center;
   justify-content: center;
   padding: 2rem;
-  box-shadow: 10px 8px 5px lightblue;
+  box-shadow: 10px 8px 5px #9B3922;
   animation: slide-in 0.5s;
 }
 
@@ -60,7 +60,7 @@ header {
   padding: 1.5rem 3rem;
   border: none;
   border-radius: 0.5rem;
-  background-color: lightblue;
+  background-color: #9B3922;
   color: white;
   text-decoration: none;
   font-size: 2.2rem;
@@ -151,12 +151,12 @@ header {
 .play-btn {
   width: 10rem;
   height: 10rem;
-  background: radial-gradient(rgb(202, 244, 255) 60%, rgb(255, 255, 255) 62%);
+  background: radial-gradient(#9B3922 60%, rgb(255, 255, 255) 62%);
   border-radius: 50%;
   position: relative;
   display: block;
   margin: 100px auto;
-  box-shadow: 0px 0px 25px 3px rgb(160, 222, 255);
+  box-shadow: 0px 0px 25px 3px #9B3922;
 }
 
 .play-btn::after {
@@ -230,63 +230,3 @@ header {
 }
 
 /*# sourceMappingURL=style.css.map */
-
-
-
-.imgg{
-  margin: 6rem;
-}
-footer {
-  background-color: lightblue;
-  color: #fff;
-  margin-top: 10rem;
-  padding: 20px 0;
-  text-align: center;
-}
-
-.footer-content {
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 20px;
-}
-
-.footer-content p {
-  margin: 10px 0;
-}
-
-.socials, .footer-links {
-  list-style: none;
-  padding: 0;
-  margin: 10px 0;
-  display: flex;
-  justify-content: center;
-}
-
-.socials li, .footer-links li {
-  margin: 0 10px;
-}
-
-.socials a img {
-  width: 24px;
-  height: 24px;
-  filter: invert(1);
-}
-
-.footer-links a {
-  color: #fff;
-  text-decoration: none;
-}
-
-.footer-links a:hover {
-  text-decoration: underline;
-}
- 
-.social{
-  text-decoration: none;
-  color: #fff;
-}
-
-
-.socials a:hover img {
-  filter: invert(0.8);
-}
