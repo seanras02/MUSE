@@ -228,14 +228,10 @@ header {
     box-shadow: none;
   }
 }
-
-/*# sourceMappingURL=style.css.map */
-
-
-
-.imgg{
+.imgg {
   margin: 6rem;
 }
+
 footer {
   background-color: lightblue;
   color: #fff;
@@ -280,13 +276,14 @@ footer {
 .footer-links a:hover {
   text-decoration: underline;
 }
- 
-.social{
+
+.social {
   text-decoration: none;
   color: #fff;
 }
 
-
 .socials a:hover img {
   filter: invert(0.8);
 }
+
+/*# sourceMappingURL=style.css.map */
