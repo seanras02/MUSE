@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-environment-component@1.3.3/dist/aframe-environment-component.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
+    <title>Lenape man in Amsterdam</title>
+</head>
+<body>
+    <a-scene>
+
+        <!--assets-->
+        <a-assets>
+            <a-asset-item id="watcher" src="models/Watcher.glb"></a-asset-item>
+            <a-sound src="noise/BOambience.mp3" autoplay="true"></a-sound>
+
+            <img id="groundText" src="img/ground.webp">
+            <img id="boxText" src="img/doos.webp">
+            <img id="skyText" src="img/skybox.webp">
+            <img id="skyNightText" src="img/nacht-skybox.webp">
+
+        </a-assets>
+
+
+
+        <!--sky-->
+        <a-sky id="sky" material="src: #skyNightText; repeat: 2 2" rotation="0 -90 0"></a-sky>
+
+        <!--Terrain-->       
+        <a-plane material="src: #groundText; repeat: 20 20 20" width="110" height="80" color="grey" position="-0.5 0 -10" rotation="-90 0 0"></a-plane>
+
+        <!--bar front-->
+        <a-cylinder radius="0.1" height="4" color="#999" position="1.5 2 -2.5"></a-cylinder>       
+               
+        <!--bars left-->
+        <a-cylinder radius="0.1" height="4" color="#999" position="-1.5 2 -2.3" rotation="0 90 0"></a-cylinder>
+        <a-cylinder radius="0.1" height="4" color="#999" position="-1.5 2 0.5" rotation="0 90 0"></a-cylinder>
+       
+        <!--bar right-->
+        <a-cylinder radius="0.1" height="4" color="#999" position="1.5 2 0.5" rotation="0 90 0"></a-cylinder>
+
+        <a-box width="3.5" height="0.1" depth="3" color="grey" position="0 4 -1"></a-box>
+
+        <!--Boxes-->
+        <a-entity id="box" geometry="primitive: box" material="src: #boxText" position="1.5 1.5 1.5" rotation="0 59 0"></a-entity>
+        <a-entity id="box" geometry="primitive: box" material="src: #boxText" position="0.6 0.5 1.5"rotation="0 0 0"></a-entity>
+        <a-entity id="box" geometry="primitive: box" material="src: #boxText" position="2 0.5 1.5" rotation="0 15 0"></a-entity>
+        <a-entity id="box" geometry="primitive: box" material="src: #boxText" position="0.3 1.5 1.5"rotation="0 31 0"></a-entity>
+        <a-entity id="box" geometry="primitive: box" material="src: #boxText" position="-0.6 0.5 1.5" rotation="0 5 0"></a-entity>
+        <a-entity id="box" geometry="primitive: box" material="src: #boxText" position="-2 0.5 1.5" rotation="0 10 0"></a-entity>
+        <a-entity id="box" geometry="primitive: box" material="src: #boxText" position="-1.2 1.5 1.5" rotation="0 72 0"></a-entity>
+        <a-entity id="box" geometry="primitive: box" material="src: #boxText" position="1 2.5 1.5" rotation="0 25 0"></a-entity>
+        <a-entity id="box" geometry="primitive: box" material="src: #boxText" position="-0.5 2.5 1.5" rotation="0 43 0"></a-entity>
+
+        <a-entity id="box" geometry="primitive: box" material="src: #boxText" position="-4 0.5 1.5" rotation="0 75 0"></a-entity>
+        <a-entity id="box" geometry="primitive: box" material="src: #boxText" position="4 0.5 1.5" rotation="0 200 0"></a-entity>
+
+        <!--People-->
+        <a-entity gltf-model="models/Watcher.glb" position="0 0 -10" animation-mixer></a-entity>
+        <a-entity gltf-model="models/Watcher.glb" position="0 0 -5" animation-mixer></a-entity>
+
+
+        <!--Buildings front-->    
+        <a-entity gltf-model="models/old-amsterdam-buildings.glb" position="-42 0 -50" rotation="0 -90 0" depth="-5"></a-entity>
+        <a-entity gltf-model="models/old-amsterdam-buildings.glb" position="4 0 -50" rotation="0 -90 0" depth="-5"></a-entity>
+
+
+        <!--Buildings left-->
+        <a-entity gltf-model="models/old-amsterdam-buildings.glb" position="-45 0 -26" rotation="0 360 0" depth="-5"></a-entity>
+        <a-entity gltf-model="models/old-amsterdam-buildings.glb" position="-45 0 23" rotation="0 360 0" depth="-5"></a-entity>
+
+        <a-entity gltf-model="models/amsterdambuilding.glb" material="color: yellow" position="-45 - 10" rotation="0 360 0" depth="-5"></a-entity>
+
+        <!--Buildings Right-->
+        <a-entity gltf-model="models/old-amsterdam-buildings.glb" position="55 0 -48" rotation="0 -180 0" depth="-5"></a-entity>
+        <a-entity gltf-model="models/old-amsterdam-buildings.glb" position="55 0 -29" rotation="0 -180 0" depth="-5"></a-entity>
+
+
+        <!--Buildings Back-->
+        <a-entity gltf-model="models/old-amsterdam-buildings.glb" position="52 0 24" rotation="0 90 0" depth="-5"></a-entity>
+        <a-entity gltf-model="models/old-amsterdam-buildings.glb" position="6 0 24" rotation="0 90 0" depth="-5"></a-entity>
+
+    </a-scene>
+</body>
+</html>
