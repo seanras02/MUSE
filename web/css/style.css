@@ -228,5 +228,62 @@ header {
     box-shadow: none;
   }
 }
+.imgg {
+  margin: 6rem;
+}
+
+footer {
+  background-color: #9B3922;
+  color: #fff;
+  margin-top: 10rem;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.footer-content {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.footer-content p {
+  margin: 10px 0;
+}
+
+.socials, .footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.socials li, .footer-links li {
+  margin: 0 10px;
+}
+
+.socials a img {
+  width: 24px;
+  height: 24px;
+  filter: invert(1);
+}
+
+.footer-links a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.social {
+  text-decoration: none;
+  color: #fff;
+}
+
+.socials a:hover img {
+  filter: invert(0.8);
+}
 
 /*# sourceMappingURL=style.css.map */
