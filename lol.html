@@ -81,8 +81,8 @@
                     const rowCount = 4; 
                     const initialRadius = 4.51; 
                     const radiusStep = 4; 
-                    const characterCountPerRow = 10; 
-                    const angleStep = (2 * Math.PI) / characterCountPerRow;
+                    const characterCountPerRow = 8; 
+                    const angleStep = (-1 * Math.PI) / characterCountPerRow;
 
                     for (let row = 0; row < rowCount; row++) {
                         const radius = initialRadius + (row * radiusStep);
@@ -108,7 +108,7 @@
             AFRAME.registerComponent('multiple-characters', {
                 init: function () {
                     const sceneEl = this.el;
-                    const characterCount = 7;
+                    const characterCount = 4;
                     const initialZ = -30;
                     const maxZ = -50;
                     const minX = -20;
