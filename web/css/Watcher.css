@@ -41,3 +41,11 @@ header{
     justify-content: space-between;
     align-items: center;
 }
+
+.Hbuttons{
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    width: 50rem;
+    padding-left: 10rem;
+}
