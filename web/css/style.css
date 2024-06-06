@@ -101,6 +101,23 @@ header {
   list-style: none;
 }
 
+.info-text {
+  padding: 2rem;
+}
+
+.container {
+  text-align: center;
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 1rem;
+}
+
+.container img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
 .box {
   width: 35rem;
   height: 35rem;
@@ -114,8 +131,6 @@ header {
   transform: scale(1);
   animation: popup 0.5s forwards ease-in-out;
 }
-
-
 
 @keyframes popup {
   0% {
