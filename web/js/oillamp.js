@@ -3,7 +3,7 @@ var scene = new THREE.Scene();
 
 
 var camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-camera.position.z = 20; 
+camera.position.z = 9; 
 
 
 var renderer = new THREE.WebGLRenderer();
@@ -13,7 +13,7 @@ document.body.appendChild(renderer.domElement);
 
 
 var loader = new THREE.GLTFLoader();
-loader.load('models/amsterdambuilding.glb', function (gltf) {
+loader.load('models/oilLampPost.glb', function (gltf) {
     model = gltf.scene;
     scene.add(model);
 });
@@ -31,7 +31,6 @@ scene.add(directionalLight);
 var pointLight = new THREE.PointLight(0xffffff, 1);
 pointLight.position.set(5, 5, 5);
 scene.add(pointLight);
-
 
 var hemisphereLight = new THREE.HemisphereLight(0xffffff, 0x444444, 0.6);
 hemisphereLight.position.set(0, 20, 0);
