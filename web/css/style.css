@@ -115,6 +115,8 @@ header {
   animation: popup 0.5s forwards ease-in-out;
 }
 
+
+
 @keyframes popup {
   0% {
     opacity: 0;
