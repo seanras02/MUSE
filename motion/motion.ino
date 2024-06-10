@@ -1,10 +1,3 @@
-/*
- * Created by ArduinoGetStarted.com
- *
- * This example code is in the public domain
- *
- * Tutorial page: https://arduinogetstarted.com/tutorials/arduino-ultrasonic-sensor-led
- */
 
 // constants won't change
 const int TRIG_PIN = 6; // Arduino pin connected to Ultrasonic Sensor's TRIG pin
