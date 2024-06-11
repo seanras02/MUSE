@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -18,6 +19,9 @@
             <img id="boxText" src="/Assets/Img/doos.webp">
             <img id="skyText" src="/Assets/Img/skybox.webp">
             <img id="skyNightText" src="/Assets/Img/skybox.webp">
+            
+            <!-- Add sound asset -->
+            <audio id="backgroundSound" src="/Assets/Sound/BOambience.mp3"></audio>
         </a-assets>
         
         <!-- sky -->
@@ -63,33 +67,44 @@
         <a-entity id="box11" geometry="primitive: box" material="src: #boxText" position="4 0.5 1.5" rotation="0 200 0"></a-entity>
 
         <!-- Buildings front -->    
-        <a-entity gltf-model="Assets/Models/old amsterdam buildings.glb" position="-42 0 -50" rotation="0 -90 0" depth="-5"></a-entity>
-        <a-entity gltf-model="Assets/Models/old amsterdam buildings.glb" position="-24 0 -50" rotation="0 -90 0" depth="-5"></a-entity>
-        <a-entity gltf-model="Assets/Models/old amsterdam buildings.glb" position="4 0 -50" rotation="0 -90 0" depth="-5"></a-entity>
+        <a-entity gltf-model="Assets/Models/old amsterdam buildings.glb" change-material-color="color: #844e35" position="-42 0 -50" rotation="0 -90 0" depth="-5"></a-entity>
+        <a-entity gltf-model="Assets/Models/old amsterdam buildings.glb" change-material-color="color: #645d42" position="-24 0 -50" rotation="0 -90 0" depth="-5"></a-entity>
+        <a-entity gltf-model="Assets/Models/old amsterdam buildings.glb" change-material-color="color: #844e35" position="4 0 -50" rotation="0 -90 0" depth="-5"></a-entity>
 
         <!-- Buildings left -->
-        <a-entity gltf-model="Assets/Models/old amsterdam buildings.glb" position="-45 0 -26" rotation="0 360 0" depth="-5"></a-entity>
-        <a-entity gltf-model="Assets/Models/old amsterdam buildings.glb" position="-45 0 -5" rotation="0 360 0" depth="-5"></a-entity>
-        <a-entity gltf-model="Assets/Models/old amsterdam buildings.glb" position="-45 0 23" rotation="0 360 0" depth="-5"></a-entity>
-        <a-entity gltf-model="models/amsterdambuilding.glb" material="color: yellow" position="-45 -10" rotation="0 360 0" depth="-5"></a-entity>
+        <a-entity gltf-model="Assets/Models/old amsterdam buildings.glb" change-material-color="color: #844e35" position="-45 0 -26" rotation="0 360 0" depth="-5"></a-entity>
+        <a-entity gltf-model="Assets/Models/old amsterdam buildings.glb" change-material-color="color: #645d42" position="-45 0 -5" rotation="0 360 0" depth="-5"></a-entity>
+        <a-entity gltf-model="Assets/Models/old amsterdam buildings.glb" change-material-color="color: #844e35" position="-45 0 23" rotation="0 360 0" depth="-5"></a-entity>
+        <a-entity gltf-model="models/amsterdambuilding.glb" change-material-color="color: #844e35" material="color: yellow" position="-45 -10" rotation="0 360 0" depth="-5"></a-entity>  
 
         <!-- Buildings Right -->
-        <a-entity gltf-model="Assets/Models/old amsterdam buildings.glb" position="55 0 -48" rotation="0 -180 0" depth="-5"></a-entity>
-        <a-entity gltf-model="Assets/Models/old amsterdam buildings.glb" position="55 0 -29" rotation="0 -180 0" depth="-5"></a-entity>
-        <a-entity gltf-model="Assets/Models/old amsterdam buildings.glb" position="55 0 0" rotation="0 -180 0" depth="-5"></a-entity>
+        <a-entity gltf-model="Assets/Models/old amsterdam buildings.glb" change-material-color="color: #844e35" position="55 0 -48" rotation="0 -180 0" depth="-5"></a-entity>
+        <a-entity gltf-model="Assets/Models/old amsterdam buildings.glb" change-material-color="color: #844e35" position="55 0 -29" rotation="0 -180 0" depth="-5"></a-entity>
+        <a-entity gltf-model="Assets/Models/old amsterdam buildings.glb" change-material-color="color: #645d42" position="55 0 0" rotation="0 -180 0" depth="-5"></a-entity>
 
         <!-- Buildings Back -->
-        <a-entity gltf-model="Assets/Models/old amsterdam buildings.glb" position="52 0 24" rotation="0 90 0" depth="-5"></a-entity>
-        <a-entity gltf-model="Assets/Models/old amsterdam buildings.glb" position="32 0 24" rotation="0 90 0" depth="-5"></a-entity>
-        <a-entity gltf-model="Assets/Models/old amsterdam buildings.glb" position="6 0 24" rotation="0 90 0" depth="-5"></a-entity>
+        <a-entity gltf-model="Assets/Models/old amsterdam buildings.glb" change-material-color="color: #645d42" position="52 0 24" rotation="0 90 0" depth="-5"></a-entity>
+        <a-entity gltf-model="Assets/Models/old amsterdam buildings.glb" change-material-color="color: #844e35" position="32 0 24" rotation="0 90 0" depth="-5"></a-entity>
+        <a-entity gltf-model="Assets/Models/old amsterdam buildings.glb" change-material-color="color: #645d42" position="6 0 24" rotation="0 90 0" depth="-5"></a-entity>
 
         <!-- WAGEN -->
         <a-entity gltf-model="Assets/Models/WAGENnotexture.glb" change-material-color="color: #964B00" position="35 0 15" rotation="0 50 0" depth="-5"></a-entity>
 
+        <!-- WAGEN2 -->
+        <a-entity gltf-model="Assets/Models/WAGENnotexture.glb" change-material-color="color: #964B00" position="26.7 0 -15" rotation="0 55 0" depth="-5"></a-entity>
+        <a-entity gltf-model="Assets/Models/Box2GrootNotexture.glb" position="21.5 1.2 -18.6 " rotation="0 55 0" depth="-5"></a-entity>
+        <a-entity gltf-model="Assets/Models/Box2GrootNotexture.glb" position="21.5 1.7 -18.6 " rotation="0 55 0" depth="-5"></a-entity>
+
+        <!-- WAGEN3 -->
+        <!--<a-entity gltf-model="Assets/Models/WAGENnotexture.glb" change-material-color="color: #964B00" position="45 0 -25" rotation="0 50 0" depth="-5"></a-entity>-->
+
         <!-- Lamps -->
-        <a-entity gltf-model="Assets/Models/LampPostBase.glb" position="37 0 15" rotation="0 50 0" depth="-5"></a-entity>
-        <a-entity gltf-model="Assets/Models/LampPostBase.glb" position="-2 0 19" rotation="0 50 0" depth="-5"></a-entity>
-        <a-entity gltf-model="Assets/Models/LampPostBase.glb" position="-40 0 17" rotation="0 50 0" depth="-5"></a-entity>
+        <a-entity gltf-model="Assets/Models/LampPostBase.glb" change-material-color="color: #844e35" position="37 0 15" rotation="0 50 0" depth="-5"></a-entity>
+        <a-entity gltf-model="Assets/Models/LampPostBase.glb" change-material-color="color: #645d42" position="-2 0 19" rotation="0 50 0" depth="-5"></a-entity>
+        <a-entity gltf-model="Assets/Models/LampPostBase.glb" change-material-color="color: #844e35" position="-40 0 17" rotation="0 50 0" depth="-5"></a-entity>
+
+        <!-- Standing next to WAGEN --> 
+        <a-entity gltf-model="Assets/Models/Watcher.glb" position="30 0 15" animation-mixer></a-entity>
 
         <!-- Rows of characters -->
         <script>
@@ -137,7 +152,7 @@
                         const x = minX + Math.random() * (maxX - minX);
                         const entity = document.createElement('a-entity');
                         entity.setAttribute('gltf-model', '#characterModel');
-                        entity.setAttribute('position', { x: x, y: -0.03, z: z });
+                        entity.setAttribute('position', { x: x, y: -0.10, z: z });
                         entity.setAttribute('animation-mixer', '');
                         entity.setAttribute('animation', `property: position; to: ${x} 0 1.5; dur: 32500; easing: linear; loop: true`);
                         sceneEl.appendChild(entity);
@@ -172,6 +187,9 @@
         
         <a-entity rows-of-characters></a-entity>
         <a-entity multiple-characters></a-entity>
+
+        <!-- Background sound -->
+        <a-sound src="#backgroundSound" autoplay="true" loop="true" volume="0"></a-sound>
         
         <!-- Applying the custom component to change the color -->
         <!--<a-entity gltf-model="#characterModel" change-material-color="color: #FF0000" position="0 0 0"></a-entity>-->
