@@ -96,13 +96,18 @@
         <a-entity gltf-model="Assets/Models/Box2GrootNotexture.glb" position="21.5 1.7 -18.6 " rotation="0 55 0" depth="-5"></a-entity>
 
         <!-- WAGEN3 -->
-        <!--<a-entity gltf-model="Assets/Models/WAGENnotexture.glb" change-material-color="color: #964B00" position="45 0 -25" rotation="0 50 0" depth="-5"></a-entity>-->
+        <a-entity gltf-model="Assets/Models/WAGENnotexture.glb" change-material-color="color: #964B00" position="-38.5 0 -17" rotation="0 230 0" depth=""></a-entity>
 
         <!-- Lamps -->
-        <a-entity gltf-model="Assets/Models/LampPostBase.glb" change-material-color="color: #844e35" position="37 0 15" rotation="0 50 0" depth="-5"></a-entity>
-        <a-entity gltf-model="Assets/Models/LampPostBase.glb" change-material-color="color: #645d42" position="-2 0 19" rotation="0 50 0" depth="-5"></a-entity>
-        <a-entity gltf-model="Assets/Models/LampPostBase.glb" change-material-color="color: #844e35" position="-40 0 17" rotation="0 50 0" depth="-5"></a-entity>
-
+        <a-entity gltf-model="Assets/Models/LampPostBase.glb"  position="37 0 15" rotation="0 50 0" depth="-5"></a-entity>
+        <a-entity gltf-model="Assets/Models/LampPostBase.glb"  position="-2 0 19" rotation="0 50 0" depth="-5"></a-entity>
+        <a-entity gltf-model="Assets/Models/LampPostBase.glb"  position="-40 0 17" rotation="0 50 0" depth="-5"></a-entity>
+        <a-entity gltf-model="Assets/Models/LampPostBase.glb"  position="30 0 17" rotation="0 50 0" depth="-5"></a-entity>
+        <a-entity gltf-model="Assets/Models/LampPostBase.glb"  position="26 0 -17.5" rotation="0 50 0" depth="-5"></a-entity>
+        <a-entity gltf-model="Assets/Models/LampPostBase.glb"  position="24 0 -14.5" rotation="0 50 0" depth="-5"></a-entity>
+        <a-entity gltf-model="Assets/Models/LampPostBase.glb"  position="-36 0 -17.5" rotation="0 50 0" depth="-5"></a-entity>
+        <a-entity gltf-model="Assets/Models/LampPostBase.glb"  position="-39 0 -14.5" rotation="0 50 0" depth="-5"></a-entity>
+        
         <!-- Standing next to WAGEN --> 
         <a-entity gltf-model="Assets/Models/Watcher.glb" position="30 0 15" animation-mixer></a-entity>
 
@@ -112,9 +117,9 @@
                 init: function () {
                     const sceneEl = this.el;
                     const rowCount = 4; 
-                    const initialRadius = 5; 
+                    const initialRadius = 6; 
                     const radiusStep = 4; 
-                    const characterCountPerRow = 8; 
+                    const characterCountPerRow = 6; 
                     const angleStep = (-1 * Math.PI) / characterCountPerRow;
 
                     for (let row = 0; row < rowCount; row++) {
