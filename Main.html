@@ -85,17 +85,40 @@
         <a-entity id="box11" geometry="primitive: box" material="src: #boxText" position="4 0.5 1.5"
             rotation="0 200 0"></a-entity>
 
+            <a-entity id="box11" geometry="primitive: box" material="src: #boxText" position="-4 0.5 -46.5"
+            rotation="0 0 0"></a-entity>
+            <a-entity id="box11" geometry="primitive: box" material="src: #boxText" position="-4 1.5 -46.5"
+            rotation="0 0 0"></a-entity>
+            <a-entity id="box11" geometry="primitive: box" material="src: #boxText" position="-4 2.5 -46.5"
+            rotation="0 0 0"></a-entity>
+            <a-entity id="box11" geometry="primitive: box" material="src: #boxText" position="-5 0.5 -46.5"
+            rotation="0 0 0"></a-entity>
+            <a-entity id="box11" geometry="primitive: box" material="src: #boxText" position="-5 1.5 -46.5"
+            rotation="0 0 0"></a-entity>
+            <a-entity id="box11" geometry="primitive: box" material="src: #boxText" position="-5 2.5 -46.5"
+            rotation="0 0 0"></a-entity>
+            <a-entity id="box11" geometry="primitive: box" material="src: #boxText" position="-6 0.5 -46.5"
+            rotation="0 0 0"></a-entity>
+            <a-entity id="box11" geometry="primitive: box" material="src: #boxText" position="-6 1.5 -46.5"
+            rotation="0 0 0"></a-entity>
+            <a-entity id="box11" geometry="primitive: box" material="src: #boxText" position="-6 2.5 -46.5"
+            rotation="0 0 0"></a-entity>
+
         <!-- Buildings front -->
         <a-entity gltf-model="Assets/Models/old amsterdam buildings.glb" change-material-color="color: #844e35"
             position="-42 0 -50" rotation="0 -90 0" depth="-5"></a-entity>
-        <a-entity gltf-model="Assets/Models/old amsterdam buildings.glb" change-material-color="color: #645d42"
-            position="-24 0 -50" rotation="0 -90 0" depth="-5"></a-entity>
+        <a-entity gltf-model="Assets/Models/amsterdambuildingV2.glb" change-material-color="color: #645d42"
+            position="-17.8 0 -48" rotation="0 -90 0" depth="-5"></a-entity>
+            <a-entity gltf-model="Assets/Models/amsterdambuildingV2.glb" change-material-color="color: #645d42"
+            position="-10.75 0 -48" rotation="0 -90 0" depth="-5"></a-entity>
         <a-entity gltf-model="Assets/Models/old amsterdam buildings.glb" change-material-color="color: #844e35"
             position="4 0 -50" rotation="0 -90 0" depth="-5"></a-entity>
 
         <!-- Buildings left -->
-        <a-entity gltf-model="Assets/Models/old amsterdam buildings.glb" change-material-color="color: #844e35"
-            position="-45 0 -26" rotation="0 360 0" depth="-5"></a-entity>
+        <a-entity gltf-model="Assets/Models/oud gebouw 3 met kleur.glb" change-material-color="color: #844e35"
+            position="-45 0 -39" rotation="0 360 0" depth="-5"></a-entity>
+            <a-entity gltf-model="Assets/Models/oud gebouw 3 met kleur.glb" change-material-color="color: #844e35"
+            position="-45 0 -31" rotation="0 360 0" depth="-5"></a-entity>
         <a-entity gltf-model="Assets/Models/old amsterdam buildings.glb" change-material-color="color: #645d42"
             position="-45 0 -5" rotation="0 360 0" depth="-5"></a-entity>
         <a-entity gltf-model="Assets/Models/old amsterdam buildings.glb" change-material-color="color: #844e35"
@@ -104,9 +127,9 @@
             material="color: yellow" position="-45 -10" rotation="0 360 0" depth="-5"></a-entity>
 
         <!-- Buildings Right -->
-        <a-entity gltf-model="Assets/Models/old amsterdam buildings.glb" change-material-color="color: #844e35"
+        <a-entity gltf-model="Assets\Models\oud gebouwen met kleur.glb" change-material-color="color: #844e35"
             position="55 0 -48" rotation="0 -180 0" depth="-5"></a-entity>
-        <a-entity gltf-model="Assets/Models/old amsterdam buildings.glb" change-material-color="color: #844e35"
+            <a-entity gltf-model="Assets/Models/old amsterdam buildings.glb" change-material-color="color: #844e35"
             position="55 0 -29" rotation="0 -180 0" depth="-5"></a-entity>
         <a-entity gltf-model="Assets/Models/old amsterdam buildings.glb" change-material-color="color: #645d42"
             position="55 0 0" rotation="0 -180 0" depth="-5"></a-entity>
@@ -114,8 +137,9 @@
         <!-- Buildings Back -->
         <a-entity gltf-model="Assets/Models/old amsterdam buildings.glb" change-material-color="color: #645d42"
             position="52 0 24" rotation="0 90 0" depth="-5"></a-entity>
-        <a-entity gltf-model="Assets/Models/old amsterdam buildings.glb" change-material-color="color: #844e35"
-            position="32 0 24" rotation="0 90 0" depth="-5"></a-entity>
+            <a-entity gltf-model="Assets/Models/oud huis met uv.glb" change-material-color="color: #844e35"
+            position="22 0 24" rotation="0 270 0" depth="-5"></a-entity>
+  
         <a-entity gltf-model="Assets/Models/old amsterdam buildings.glb" change-material-color="color: #645d42"
             position="6 0 24" rotation="0 90 0" depth="-5"></a-entity>
 
@@ -169,10 +193,10 @@
             AFRAME.registerComponent('rows-of-characters', {
                 init: function () {
                     const sceneEl = this.el;
-                    const rowCount = 4;
+                    const rowCount = 2;
                     const initialRadius = 6;
                     const radiusStep = 4;
-                    const characterCountPerRow = 6;
+                    const characterCountPerRow = 5;
                     const angleStep = (-1 * Math.PI) / characterCountPerRow;
 
                     for (let row = 0; row < rowCount; row++) {
@@ -199,7 +223,7 @@
             AFRAME.registerComponent('multiple-characters', {
                 init: function () {
                     const sceneEl = this.el;
-                    const characterCount = 4;
+                    const characterCount = 16;
                     const initialZ = -30;
                     const maxZ = -50;
                     const minX = -20;
@@ -247,7 +271,7 @@
         <a-entity multiple-characters></a-entity>
 
         <!-- Background sound -->
-        <a-sound src="#backgroundSound" autoplay="true" loop="true" volume="0.5"></a-sound>
+        <a-sound src="#backgroundSound" autoplay="true" loop="true" volume="0"></a-sound>
 
         <!-- Applying the custom component to change the color -->
         <!--<a-entity gltf-model="#characterModel" change-material-color="color: #FF0000" position="0 0 0"></a-entity>-->
