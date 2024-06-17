@@ -3,13 +3,14 @@
 #define trigPin 8
 #define echoPin 9
 #define LED_PIN 2      // Pin voor de WS2812B LED-strip
-#define NUMPIXELS 200   // Aantal LEDs op je strip
+#define NUMPIXELS 201   // Aantal LEDs op je strip
 
 Adafruit_NeoPixel strip = Adafruit_NeoPixel(NUMPIXELS, LED_PIN, NEO_GRB + NEO_KHZ800);
 
 long duration;
 int distance;
 bool sensorActivated = false;  // Variabele om de sensoractivatie bij te houden
+bool isLEDOn = false;
 
 void setup() {
   pinMode(trigPin, OUTPUT);
@@ -37,23 +38,36 @@ void loop() {
   // Controleer of de sensor is geactiveerd (binnen 1 meter)
   if (distance < 100 && !sensorActivated) {
     sensorActivated = true;
-    lightUpIndividually(2000);  // Licht elk LED afzonderlijk op gedurende 2 seconden
-  } else if (distance >= 50) {
+    if (!isLEDOn){
+      coolEffect(255, 0, 0, 5);
+      isLEDOn = true;
+    }else{
+      turnOffAllLEDs();
+      isLEDOn = false;
+    }
+  } else if (distance >= 100) {
     sensorActivated = false;
   }
 }
 
-// Functie om elk LED afzonderlijk op te laten lichten
-void lightUpIndividually(int duration) {
-  for (int i = 0; i < 200; i++) {
-    strip.setBrightness(30);
-    strip.setPixelColor(i, strip.Color(255, 0, 0));  // Blauwe kleur, pas aan naar wens
+void coolEffect(uint8_t r, uint8_t g, uint8_t b, uint8_t wait) {
+  for (int i = 0; i < strip.numPixels(); i++){
+    strip.setPixelColor(i, strip.Color(r, g, b));
     strip.show();
-    delay(duration / strip.numPixels());
-
-
-    strip.setPixelColor(i-50, strip.Color(0, 0, 0));  // Zet de LED weer uit
-    strip.show();
+    delay(wait);
+    strip.setPixelColor(i, strip.Color(0,0,0));
   }
+  for (int i = strip.numPixels() - 1; i >= 0; i--){
+    strip.setPixelColor(i, strip.Color(r, g, b));
+    strip.show();
+    delay(wait);
+  }
+}
 
+// alle leds uit
+void turnOffAllLEDs(){
+  for (int i = 0; i < strip.numPixels(); i++){
+    strip.setPixelColor(i, strip.Color(0, 0, 0));
+  }
+  strip.show();
 }
