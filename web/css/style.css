@@ -18,8 +18,9 @@ main {
   width: 100%;
   height: auto;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+  gap: 5rem;
   padding-left: 20rem;
   padding-right: 20rem;
   padding-top: 4rem;
@@ -130,6 +131,14 @@ header {
   opacity: 0;
   transform: scale(1);
   animation: popup 0.5s forwards ease-in-out;
+}
+
+.box3dmodel {
+  background-image: url(/web/img/backgroundbox.png);
+}
+
+.box3dmodel2 {
+  background-image: url(/web/img/vrbril.avif);
 }
 
 @keyframes popup {
