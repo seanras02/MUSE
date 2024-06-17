@@ -3,7 +3,7 @@ var scene = new THREE.Scene();
 
 
 var camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-camera.position.z = 20; 
+camera.position.z = 30; 
 
 
 var renderer = new THREE.WebGLRenderer();
@@ -13,7 +13,7 @@ document.body.appendChild(renderer.domElement);
 
 
 var loader = new THREE.GLTFLoader();
-loader.load('models/amsterdambuilding.glb', function (gltf) {
+loader.load('models/oudgebouw3metkleur.glb', function (gltf) {
     model = gltf.scene;
     scene.add(model);
 });
