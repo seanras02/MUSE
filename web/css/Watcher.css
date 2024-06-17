@@ -5,8 +5,8 @@ body {
 }
 
 .home-button, .reset-button {
-    padding: 10px 20px;
-    background-color: #007bff;
+    padding: 15px 15px;
+    background-color: #9B3922; 
     color: white;
     text-decoration: none;
     border: none;
@@ -14,11 +14,12 @@ body {
     cursor: pointer;
     font-size: 16px;
     transition: background-color 0.3s ease;
-
 }
 
 .home-button:hover, .reset-button:hover {
-    background-color: #0056b3;
+    background-color: white;
+    color: black;
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px;
 }
 
 .home-button {
@@ -36,10 +37,12 @@ body {
 header{
     width: 100%;
     height: 6rem;
-    background:  #9B3922;
+    background:  white;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+    box-shadow: 10px 8px 5px #9B3922;
+    margin-bottom: 10rem;
 }
 
 .Hbuttons{
@@ -47,5 +50,4 @@ header{
     justify-content: space-between;
     align-items: center; 
     width: 50rem;
-    padding-left: 10rem;
 }
