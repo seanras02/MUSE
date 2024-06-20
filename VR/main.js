@@ -12,9 +12,9 @@ AFRAME.registerComponent('multiple-characters', {
             const x = minX + Math.random() * (maxX - minX);
             const entity = document.createElement('a-entity');
             entity.setAttribute('gltf-model', '#characterModel');
-            entity.setAttribute('position', { x: x, y: -0.10, z: z });
+            entity.setAttribute('position', { x: x, y: -0.05, z: z });
             entity.setAttribute('animation-mixer', '');
-            entity.setAttribute('animation', `property: position; to: ${x} -0.10 1.5; dur: 2500; easing: linear; loop: true`);
+            entity.setAttribute('animation', `property: position; to: ${x} -0.05 1.5; dur: 32500; easing: linear; loop: true`);
             sceneEl.appendChild(entity);
         }
     }

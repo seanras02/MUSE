@@ -3,25 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+    <script src="https://aframe.io/releases/1.6.0/aframe.min.js"></script>
     <script src="https://unpkg.com/aframe-environment-component@1.3.3/dist/aframe-environment-component.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
+    <script src="main.js" defer></script>
     <title>Lenape man in Amsterdam</title>
 </head>
 <body>
     <a-scene>
         <!--assets-->
         <a-assets>
-            <a-asset-item id="watcher" src="models/Watcher.glb"></a-asset-item>
+            <a-asset-item id="characterModel" src="models/Watcher.glb" animation-mixer></a-asset-item>
             
             <img id="groundText" src="img/ground.webp">
             <img id="boxText" src="img/doos.webp">
             <img id="skyText" src="img/skybox.webp">
             <img id="skyNightText" src="img/nacht-skybox.webp">
 
+
+            <audio id="backgroundSound" src="noise/BOambience.mp3"></audio>
         </a-assets>
 
 
+        <!--lighting-->
+        <a-light type="spot" color="white" intensity="1" position="40 0 0" rotation="-90 0 0" penumbra="1"></a-light>
 
         <!--sky-->
         <a-sky id="sky" material="src: #skyNightText; repeat: 2 2" rotation="0 -90 0"></a-sky>
@@ -42,33 +47,13 @@
         <a-box width="3.5" height="0.1" depth="3" color="grey" position="0 4 -1"></a-box>
 
         <!--Boxes-->
-        <a-entity id="box" geometry="primitive: box" material="src: #boxText" position="1.5 1.5 1.5" rotation="0 59 0"></a-entity>
-        <a-entity id="box" geometry="primitive: box" material="src: #boxText" position="0.6 0.5 1.5"rotation="0 0 0"></a-entity>
-        <a-entity id="box" geometry="primitive: box" material="src: #boxText" position="2 0.5 1.5" rotation="0 15 0"></a-entity>
-        <a-entity id="box" geometry="primitive: box" material="src: #boxText" position="0.3 1.5 1.5"rotation="0 31 0"></a-entity>
-        <a-entity id="box" geometry="primitive: box" material="src: #boxText" position="-0.6 0.5 1.5" rotation="0 5 0"></a-entity>
-        <a-entity id="box" geometry="primitive: box" material="src: #boxText" position="-2 0.5 1.5" rotation="0 10 0"></a-entity>
-        <a-entity id="box" geometry="primitive: box" material="src: #boxText" position="-1.2 1.5 1.5" rotation="0 72 0"></a-entity>
-        <a-entity id="box" geometry="primitive: box" material="src: #boxText" position="1 2.5 1.5" rotation="0 25 0"></a-entity>
-        <a-entity id="box" geometry="primitive: box" material="src: #boxText" position="-0.5 2.5 1.5" rotation="0 43 0"></a-entity>
+        <a-entity gltf-model="models/dozen.glb" material="src #boxText" position="-1 0.5 3" scale="0.5 0.5 0.5" rotation="0 -90 0"></a-entity>
 
-        <a-entity id="box" geometry="primitive: box" material="src: #boxText" position="-4 0.5 1.5" rotation="0 75 0"></a-entity>
-        <a-entity id="box" geometry="primitive: box" material="src: #boxText" position="4 0.5 1.5" rotation="0 200 0"></a-entity>
+        <!--objects-->
+        <a-entity gltf-model="models/oilLampPost.glb" material="metal" position="-35 -1 0"></a-entity>
 
         <!--People-->
-        <a-entity gltf-model="models/Watcher.glb" position="0 0 -10" animation-mixer></a-entity>
-        <a-entity gltf-model="models/Watcher.glb" position="0 0 -5" animation-mixer></a-entity>
-
-        <!--walking-->
-
-        <!--<a-entity
-            id="character" 
-            gltf-model="#watcher" 
-            position="0 0 -5"
-            scale="2 2 2"
-            animation-mixer="clip: walk"
-            animation="property: position; to: 4 0 0; dur: 4000; easing: linear; loop: true">
-        </a-entity>-->
+        <a-entity gltf-model="models/watcher___02.glb" position="0 0 -10" animation-mixer=""></a-entity>
 
 
         <!--Buildings front-->    
@@ -94,6 +79,12 @@
         <a-entity gltf-model="models/old-amsterdam-buildings.glb" position="52 0 24" rotation="0 90 0" depth="-5"></a-entity>
         <a-entity gltf-model="models/old-amsterdam-buildings.glb" position="32 0 24" rotation="0 90 0" depth="-5"></a-entity>
         <a-entity gltf-model="models/old-amsterdam-buildings.glb" position="6 0 24" rotation="0 90 0" depth="-5"></a-entity>
+
+
+        <a-entity multiple-characters></a-entity>
+
+        <!-- Background sound -->
+        <a-sound src="#backgroundSound" autoplay="true" loop="true" volume="1"></a-sound>
 
     </a-scene>
 </body>
