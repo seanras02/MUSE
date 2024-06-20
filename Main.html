@@ -18,11 +18,12 @@
         <a-assets>
             <a-asset-item id="watcher" src="Assets/Models/Watcher.glb"></a-asset-item>
             <a-asset-item id="characterModel" src="Assets/Models/Watcher group idle 02.glb"></a-asset-item>
+            <a-asset-item id="characterModel2" src="Assets/Models/Watcher group of 4 ver.glb"></a-asset-item>
 
             <img id="groundText" src="/Assets/Img/ground.webp">
             <img id="boxText" src="/Assets/Img/doos.webp">
             <img id="skyText" src="/Assets/Img/skybox.webp">
-            <img id="skyNightText" src="/Assets/Img/nagt skybox.png">
+            <img id="skyNightText" src="/Assets/Img/nagt skybox-modified.png">
 
             <!-- Add sound asset -->
             <audio id="backgroundSound" src="/Assets/Sound/BOambience.mp3"></audio>
@@ -36,15 +37,15 @@
             position="-0.5 0 -10" rotation="-90 0 0"></a-plane>
 
         <!-- Water1 -->
-        <a-box id="water1" width="10" height="3" depth="9.3" position="-47 0 -2.7"
+        <a-box id="water1" width="10" height="1.5" depth="9.3" position="-47 0 -2.7"
             material="shader: flat; color: #0000FF; opacity: 0.7;"></a-box>
 
         <!-- Water2 -->
-        <a-box id="water2" width="16" height="3" depth="9.3" position="-24 0 24.25"
+        <a-box id="water2" width="16" height="1.5" depth="9.3" position="-24 0 24.25"
             material="shader: flat; color: #0000FF; opacity: 0.7;"></a-box>
 
         <!-- Water3 -->
-        <a-box id="water3" width="18" height="3" depth="9.3" position="34 0 -50.25"
+        <a-box id="water3" width="18" height="1.5" depth="9.3" position="34 0 -50.25"
             material="shader: flat; color: #0000FF; opacity: 0.7;"></a-box>
         <!-- Water3 -->
         <a-box id="water3" width="3" height="1" depth="9.3" rotation="0 87.5 0" position="57 0 1.25"
@@ -182,12 +183,70 @@
         </a-entity>
 
         <!-- Bridge -->
-<a-entity gltf-model="Assets/Models/Brug.glb" position="-25 0 8" rotation="0 180 0"></a-entity>
-<a-entity gltf-model="Assets/Models/Brug.glb" position="-21.7 0 40" rotation="0 360 0"></a-entity>
+    <a-entity gltf-model="Assets/Models/Brug.glb" position="-25 -1 8" rotation="0 180 0"></a-entity>
+    <a-entity gltf-model="Assets/Models/Brug.glb" position="-21.7 -1 40" rotation="0 360 0"></a-entity>
 
 
 
-
+    <a-scene>
+        <a-entity gltf-model="Assets/Models/Watcher.glb" position="20 -0.03 -42.5" rotation="0 0 0" animation-mixer 
+                  animation="property: position; to: 20 -0.03 10.5; dur: 19500; easing: linear; loop: true"></a-entity>
+    
+        <a-entity gltf-model="Assets/Models/Watcher.glb" position="15 -0.03 -42.5" rotation="0 0 0" animation-mixer 
+                  animation="property: position; to: 15 -0.03 -7; dur: 18000; easing: linear; loop: true"></a-entity>
+    
+        <a-entity gltf-model="Assets/Models/Watcher.glb" position="10 -0.03 -42.5" rotation="0 0 0" animation-mixer 
+                  animation="property: position; to: 10 -0.03 -7; dur: 16000; easing: linear; loop: true"></a-entity>
+    
+        <a-entity gltf-model="Assets/Models/Watcher.glb" position="2 -0.03 -42.5" rotation="0 0 0" animation-mixer 
+                  animation="property: position; to: 2 -0.03 -7; dur: 15000; easing: linear; loop: true"></a-entity>
+                  
+        <a-entity gltf-model="Assets/Models/Watcher.glb" position="-10 -0.03 -42.5" rotation="0 0 0" animation-mixer 
+                  animation="property: position; to: -10 -0.03 -7; dur: 14000; easing: linear; loop: true"></a-entity>
+    
+        <a-entity gltf-model="Assets/Models/Watcher.glb" position="-18 -0.03 -42.5" rotation="0 0 0" animation-mixer 
+                  animation="property: position; to: -18 -0.03 -7; dur: 13000; easing: linear; loop: true"></a-entity>
+    
+        
+    
+        <a-entity gltf-model="Assets/Models/Watcher.glb" position="-29 -0.03 -42.5" rotation="0 0 0" animation-mixer 
+                  animation="property: position; to: -29 -0.03 -7; dur: 23000; easing: linear; loop: true"></a-entity>
+    
+        <a-entity gltf-model="Assets/Models/Watcher.glb" position="-32 -0.03 -32.5" rotation="0 0 0" animation-mixer 
+                  animation="property: position; to: -32 -0.03 -7; dur: 10000; easing: linear; loop: true"></a-entity>
+    </a-scene>
+    
+    <a-scene>
+        <!-- Create entities in a half-circle behind the spawn point -->
+        <script>
+            const numEntities = 8;  // Reduced number of entities for a half-circle
+            const radius = 6;
+            const modelPath = 'Assets/Models/Watcher group of 4 ver.glb';
+            const spawnPoint = { x: 0, z: 0 }; // Coordinates of the spawn point
+    
+            // Function to create half-circle entities
+            function createHalfCircleEntities(numEntities, radius, modelPath) {
+                const entities = [];
+                const angleStep = Math.PI / (numEntities - 1);
+    
+                for (let i = 0; i < numEntities; i++) {
+                    const angle = Math.PI + i * angleStep;  // Adjust angle to create a half-circle behind the spawn point
+                    const x = spawnPoint.x + radius * Math.cos(angle);
+                    const z = spawnPoint.z + radius * Math.sin(angle);
+                    const rotationY = (angle * 0 / Math.PI) -0; // Adjust rotation to face the spawn point
+    
+                    entities.push(`
+                        <a-entity gltf-model="${modelPath}" position="${x} 0 ${z}" rotation="0 ${rotationY} 0" animation-mixer></a-entity>
+                    `);
+                }
+                return entities.join('\n');
+            }
+    
+            // Add the entities to the scene
+            document.querySelector('a-scene').innerHTML += createHalfCircleEntities(numEntities, radius, modelPath);
+        </script>
+    </a-scene>
+    
 
 
         <!-- Rows of characters -->
@@ -195,10 +254,10 @@
             AFRAME.registerComponent('rows-of-characters', {
                 init: function () {
                     const sceneEl = this.el;
-                    const rowCount = 2;
-                    const initialRadius = 6;
-                    const radiusStep = 4;
-                    const characterCountPerRow = 5;
+                    const rowCount = 0;
+                    const initialRadius = 0;
+                    const radiusStep = 0;
+                    const characterCountPerRow = 0;
                     const angleStep = (-1 * Math.PI) / characterCountPerRow;
 
                     for (let row = 0; row < rowCount; row++) {
@@ -225,17 +284,17 @@
             AFRAME.registerComponent('multiple-characters', {
                 init: function () {
                     const sceneEl = this.el;
-                    const characterCount = 2;
-                    const initialZ = -30;
-                    const maxZ = -50;
-                    const minX = -20;
-                    const maxX = 20;
+                    const characterCount = 0;
+                    const initialZ = -0;
+                    const maxZ = -0;
+                    const minX = -0;
+                    const maxX = 0;
 
                     for (let i = 0; i < characterCount; i++) {
                         const z = initialZ - Math.random() * (initialZ - maxZ);
                         const x = minX + Math.random() * (maxX - minX);
                         const entity = document.createElement('a-entity');
-                        entity.setAttribute('gltf-model', '#characterModel');
+                        entity.setAttribute('gltf-model', '#characterModel2');
                         entity.setAttribute('position', { x: x, y: -0.10, z: z });
                         entity.setAttribute('animation-mixer', '');
                         entity.setAttribute('animation', `property: position; to: ${x} 0 1.5; dur: 32500; easing: linear; loop: true`);
@@ -243,6 +302,55 @@
                     }
                 }
             });
+
+            
+
+            // Custom component to change material color
+            AFRAME.registerComponent('change-material-color', {
+                schema: {
+                    color: { type: 'color', default: '#FFF' }
+                },
+                init: function () {
+                    const model = this.el.getObject3D('mesh');
+                    if (model) {
+                        this.changeColor(model);
+                    } else {
+                        this.el.addEventListener('model-loaded', (e) => {
+                            this.changeColor(e.detail.model);
+                        });
+                    }
+                },
+                changeColor: function (model) {
+                    model.traverse((node) => {
+                        if (node.isMesh) {
+                            node.material.color.set(this.data.color);
+                        }
+                    });
+                }
+            });
+             AFRAME.registerComponent('multiple-characters', {
+                init: function () {
+                    const sceneEl = this.el;
+                    const characterCount = 0;
+                    const initialZ = -0;
+                    const maxZ = -0;
+                    const minX = -0;
+                    const maxX = 0;
+
+                    for (let i = 0; i < characterCount; i++) {
+                        const z = initialZ - Math.random() * (initialZ - maxZ);
+                        const x = minX + Math.random() * (maxX - minX);
+                        const entity = document.createElement('a-entity');
+                        entity.setAttribute('gltf-model', '#characterModel2');
+                        entity.setAttribute('position', { x: x, y: -0.0, z: z });
+                        entity.setAttribute('animation-mixer', '');
+                        entity.setAttribute('animation', `property: position; to: ${x} 0 1.5; dur: 32500; easing: linear; loop: true`);
+                        sceneEl.appendChild(entity);
+                    }
+                }
+            });
+
+            
 
             // Custom component to change material color
             AFRAME.registerComponent('change-material-color', {
