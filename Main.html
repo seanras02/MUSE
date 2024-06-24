@@ -288,36 +288,27 @@
     </a-scene>
     
     <a-scene>
-        <!-- Create entities in a half-circle behind the spawn point -->
-        <script>
-            const numEntities = 6;  // Reduced number of entities for a half-circle
-            const radius = 6;
-            const modelPath = 'Assets/Models/Watcher group of 4 ver.glb';
-            const spawnPoint = { x: 0, z: 0 }; // Coordinates of the spawn point
-    
-            // Function to create half-circle entities
-            function createHalfCircleEntities(numEntities, radius, modelPath) {
-                const entities = [];
-                const angleStep = Math.PI / (numEntities - 1);
-    
-                for (let i = 0; i < numEntities; i++) {
-                    const angle = Math.PI + i * angleStep;  // Adjust angle to create a half-circle behind the spawn point
-                    const x = spawnPoint.x + radius * Math.cos(angle);
-                    const z = spawnPoint.z + radius * Math.sin(angle);
-                    const rotationY = (angle * 0 / Math.PI) -0; // Adjust rotation to face the spawn point
-    
-                    entities.push(`
-                        <a-entity gltf-model="${modelPath}" position="${x} 0 ${z}" rotation="0 ${rotationY} 0" animation-mixer></a-entity>
-                    `);
-                }
-                return entities.join('\n');
-            }
-    
-            // Add the entities to the scene
-            document.querySelector('a-scene').innerHTML += createHalfCircleEntities(numEntities, radius, modelPath);
-        </script>
-    </a-scene>
-    
+       
+
+    <a-entity gltf-model="Assets/Models/Watcher group of 4 ver.glb" position="5 -0.03 -1" rotation="0 270 0" animation-mixer>
+        </a-entity>
+        <a-entity gltf-model="Assets/Models/Watcher group of 4 ver.glb" position="4 -0.03 -1" rotation="0 270 0" animation-mixer>
+        </a-entity>
+        <a-entity gltf-model="Assets/Models/Watcher group of 4 ver.glb" position="0 -0.03 -5" rotation="0 0 0" animation-mixer>
+        </a-entity>
+        <a-entity gltf-model="Assets/Models/Watcher group of 4 ver.glb" position="2 -0.03 -5" rotation="0 340 0" animation-mixer>
+        </a-entity>
+        <a-entity gltf-model="Assets/Models/Watcher group of 4 ver.glb" position="3 -0.03 -5" rotation="0 340 0" animation-mixer>
+        </a-entity>
+        <a-entity gltf-model="Assets/Models/Watcher group of 4 ver.glb" position="-3 -0.03 -4" rotation="0 40 0" animation-mixer>
+        </a-entity>
+        <a-entity gltf-model="Assets/Models/Watcher group of 4 ver.glb" position="-4 -0.03 -4" rotation="0 40 0" animation-mixer>
+        </a-entity>
+        <a-entity gltf-model="Assets/Models/Watcher group of 4 ver.glb" position="-5 -0.03 -0.5" rotation="0 90 0" animation-mixer>
+        </a-entity>
+        <a-entity gltf-model="Assets/Models/Watcher group of 4 ver.glb" position="-6 -0.03 -0.5" rotation="0 90 0" animation-mixer>
+        </a-entity>
+        
 
 
         <!-- Rows of characters -->
