@@ -26,7 +26,7 @@
             <img id="skyNightText" src="Assets/Img/nagt skybox-modified.png">
 
             <!-- Add sound asset -->
-            <audio id="backgroundSound" src="/Assets/Sound/BOambience.mp3"></audio>
+            <audio id="backgroundSound" src="Assets/Sound/BOambience.mp3"></audio>
         </a-assets>
 
         <a-entity gltf-model="Assets/Models/Box2GrootNotexture.glb" position="-37 0 6" rotation="0 180 0" animation-mixer>
@@ -242,8 +242,6 @@
             <a-entity gltf-model="Assets/Models/LampPostBase.glb" position="48.5 0 20" rotation="0 50 0"
             depth="-5"></a-entity>
 
-            
-
         <!-- Standing next to WAGEN -->
         <a-entity gltf-model="Assets/Models/Watcher.glb" position="32 -0.03 10" rotation="0 180 0" animation-mixer>
         </a-entity>
@@ -256,8 +254,6 @@
         <!-- Bridge -->
     <a-entity gltf-model="Assets/Models/Brug.glb" position="-25 -1 8" rotation="0 180 0"></a-entity>
     <a-entity gltf-model="Assets/Models/Brug.glb" position="-21.7 -1 40" rotation="0 360 0"></a-entity>
-
-
 
     <a-scene>
         <a-entity gltf-model="Assets/Models/Watcher.glb" position="20 -0.03 -42.5" rotation="0 0 0" animation-mixer 
@@ -288,25 +284,15 @@
     </a-scene>
     
     <a-scene>
-       
-
+    
     <a-entity gltf-model="Assets/Models/Watcher group of 4 ver.glb" position="5 -0.03 -1" rotation="0 270 0" animation-mixer>
-        </a-entity>
-        <a-entity gltf-model="Assets/Models/Watcher group of 4 ver.glb" position="4 -0.03 -1" rotation="0 270 0" animation-mixer>
-        </a-entity>
-        <a-entity gltf-model="Assets/Models/Watcher group of 4 ver.glb" position="0 -0.03 -5" rotation="0 0 0" animation-mixer>
         </a-entity>
         <a-entity gltf-model="Assets/Models/Watcher group of 4 ver.glb" position="2 -0.03 -5" rotation="0 340 0" animation-mixer>
         </a-entity>
-        <a-entity gltf-model="Assets/Models/Watcher group of 4 ver.glb" position="3 -0.03 -5" rotation="0 340 0" animation-mixer>
-        </a-entity>
+        
         <a-entity gltf-model="Assets/Models/Watcher group of 4 ver.glb" position="-3 -0.03 -4" rotation="0 40 0" animation-mixer>
         </a-entity>
-        <a-entity gltf-model="Assets/Models/Watcher group of 4 ver.glb" position="-4 -0.03 -4" rotation="0 40 0" animation-mixer>
-        </a-entity>
         <a-entity gltf-model="Assets/Models/Watcher group of 4 ver.glb" position="-5 -0.03 -0.5" rotation="0 90 0" animation-mixer>
-        </a-entity>
-        <a-entity gltf-model="Assets/Models/Watcher group of 4 ver.glb" position="-6 -0.03 -0.5" rotation="0 90 0" animation-mixer>
         </a-entity>
         
 
@@ -365,7 +351,6 @@
                 }
             });
 
-            
 
             // Custom component to change material color
             AFRAME.registerComponent('change-material-color', {
@@ -413,7 +398,6 @@
             });
 
             
-
             // Custom component to change material color
             AFRAME.registerComponent('change-material-color', {
                 schema: {
@@ -444,9 +428,6 @@
 
         <!-- Background sound -->
         <a-sound src="#backgroundSound" autoplay="true" loop="true" volume="0"></a-sound>
-
-        <!-- Applying the custom component to change the color -->
-        <!--<a-entity gltf-model="#characterModel" change-material-color="color: #FF0000" position="0 0 0"></a-entity>-->
 
     </a-scene>
 </body>
